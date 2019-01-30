@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend Finder</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="style/css" href="/app/data/style.css"/>
+  </head>
+
+  <body>
+    <!-- Friend Finder -->
+    <div class="container">
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 class="text-center">Friend Finder</h1>
+        <hr />
+        <h2 class="text-center">
+          Ever Wonder Who Might Be Your Next "Bestie?"
+        </h2>
+
+        <div class="text-center">
+            <button id="survey-btn" type="submit" class="btn btn-survey btn-lg">TAKE SURVEY</button>
+            <a href="/app/public/survey.html"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+      <div class="container">
+        <a href="/api/friends">API Frinds List</a>
+        <span>|</span>
+        <a href="https://github.com/rwazny/Friend-Finder">GitHub Repo</a>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+      // $("#submit-btn").on("click", function (event) {
+      //     event.preventDefault();
+      //         var newChar = {
+      //         name: $("#train-name-input").val().trim(),
+      //         email: $("#destination-input").val().trim(),
+      //         number: $("#frequency-input").val().trim(),
+      //         secretid: $("#frequency-min-input").val().trim(),
+
+      //     };
+
+      //     $.post("/api/tables", newChar)
+      //         .then(function (data) {
+      //             console.log("hotrestaurant.html", data);
+      //             alert("Reservation completed...");
+      //         });
+      // });
+    </script>
+  </body>
+</html>

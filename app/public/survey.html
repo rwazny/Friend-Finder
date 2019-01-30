@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend Finder</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="style/css" href="/app/data/style.css"/>
+  </head>
+  <body>
+    <!-- Friend Finder -->
+    <div class="container">
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 class="text-center">Friend Finder Survey</h1>
+        <hr />
+        <div class="text-center">
+		<p>Take a quick 10 question survey to find your perfect match!<br>
+            Your next "Friend" might be just down the road?!!</p>
+        </div>
+            <form>
+                    <div class="form-group">
+                        <input id="name" type="text" class="form-control" placeholder="Name (Required)">
+                    </div>
+                    <div class="form-group">
+                        <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+                    </div>
+                    <div class="form-group">
+                        <label for="question1">Do You Like an Active Lifestyle?</label>
+                        <select class="form-control" id="question1">
+                            <option value="empty"></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question2"> You Like Pets.</label>
+                        <select class="form-control" id="question2">
+                                <option value="empty"></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question3">You Like To Travel.</label>
+                        <select class="form-control" id="question3">
+                                <option value="empty"></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question4">You Still Go To Concerts.</label>
+                        <select class="form-control" id="question4">
+                                <option value="empty"></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question5">I read books, just for fun!</label>
+                        <select class="form-control" id="question5">
+                                <option value="empty"></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question6">Prefer an Evening Out, as Opposed To a Stay Home Night.</label>
+                        <select class="form-control" id="question6">
+                                <option value="empty"></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question7">You Enjoy Meeting New People.</label>
+                        <select class="form-control" id="question7">
+                                <option value="empty"></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question8">Believe in "Airing" your Issues on Social Media.</label>
+                        <select class="form-control" id="question8">
+                                <option value="empty"></option>
+                                <option value="1">1 (Strongly Disagree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question9">Believe in a "Work, Work, Work" Kind of Life.</label>
+                        <select class="form-control" id="question9">
+                            <option value="empty"></option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="question10">Respect Other Beliefs and Opinions (Even if they disagree with your own).</label>
+                        <select class="form-control" id="question10">
+                        <option value="empty"></option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="text-center">
+                        <button id="submit-btn" type="submit" class="btn btn-submit btn-lg">SUBMIT</button>
+                    </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+		<div class="container">
+			<a href="/api/friends">API Frinds List</a>
+			<span>|</span>
+			<a href="https://github.com/rwazny/Friend-Finder">GitHub Repo</a>
+		</div>
+	</footer>
+
+    </body>
+
+    <script>
+
+
+
+</script>
+
+
+
+</html>

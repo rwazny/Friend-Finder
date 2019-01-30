@@ -1,0 +1,27 @@
+/* .container {
+  background-color: lightslategray;
+} */
+
+.jumbotron {
+  background-color: purple;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 200px;
+}
+
+a,
+#survey-btn {
+  align-content: center;
+  color: orange;
+}
+
+#submit-btn {
+  align-content: center;
+  color: orange;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 30px;
+}
