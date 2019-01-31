@@ -12,7 +12,7 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="style/css" href="/app/data/style.css"/>
+    <link rel="stylesheet" href="../data/style.css"/>
   </head>
   <body>
     <!-- Friend Finder -->
@@ -156,15 +156,47 @@
 			<span>|</span>
 			<a href="https://github.com/rwazny/Friend-Finder">GitHub Repo</a>
 		</div>
-	</footer>
+    </footer>
+    
+    <div id="resultsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+ 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="matchName"></h2>
+                    <img id="matchImg" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+ 
+        </div>
+    </div>
 
     </body>
 
     <script>
+        $("#submit-btn").on("click", function(){
+            var userData =  {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [$("#question1").val(),$("#question2").val(),$("#question3").val(),$("#question4").val(),$("#question5").val(),$("#question6").val(),$("#question7").val(),$("#question8").val(),$("#question9").val(),$("#question10").val()]
+            };
 
+            $.post("/api/friends", userData, function(data){
+                $("#matchName").text(data.name);
+                $("#matchImg").attr("src",data.photo);
 
-
-</script>
+                $("#resultsModal").modal("toggle");
+            });
+        });
+    </script>
 
 
 

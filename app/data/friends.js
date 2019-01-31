@@ -25,8 +25,7 @@ var friendsArray = [
   },
   {
     name: "Winston the Wine-O",
-    photo:
-      "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj236rI5pHgAhUM6IMKHb6ICtoQjRx6BAgBEAU&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F318559373634687810%2F&psig=AOvVaw0cCggqzfanRA5huRxTlWrc&ust=1548809916660852",
+    photo: "https://i.imgflip.com/17sm9t.jpg",
     scores: ["1", "1", "5", "5", "5", "5", "5", "5", "5", "1"]
   },
   {

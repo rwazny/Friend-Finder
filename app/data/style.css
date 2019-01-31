@@ -3,21 +3,24 @@
 } */
 
 .jumbotron {
-  background-color: purple;
+  background-color: rgb(98, 187, 255);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 200px;
+  font-size: 20px;
 }
 
 a,
-#survey-btn {
+#survey-btn,
+.btn-survey {
   align-content: center;
-  color: orange;
+  color: white;
+  background-color: rgb(73, 8, 101);
 }
 
 #submit-btn {
   align-content: center;
-  color: orange;
+  color: white;
+  background-color: rgb(73, 8, 101);
 }
 
 h1 {

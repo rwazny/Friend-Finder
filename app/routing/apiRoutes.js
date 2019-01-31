@@ -30,26 +30,40 @@ module.exports = function(app) {
   // ---------------------------------------------------------------------------
 
   app.post("/api/friends", function(req, res) {
-    // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
-    // It will do this by sending out the value "true" have a table
-    // req.body is available since we're using the body parsing middleware
-    if (friends.length < 10) {
-      friends.push(req.body);
-      res.json(true);
-    } else {
-      friends.push(req.body);
-      res.json(false);
+    var newFriend = req.body;
+    var newFriendScores = newFriend.scores;
+    console.log(newFriendScores);
+    var scoresArray = [];
+    var friendCount = 0;
+    var bestMatch = 0;
+
+    //runs through all current friends in list
+    for (var i = 0; i < friends.length; i++) {
+      var scoresDiff = 0;
+      //run through scores to compare friends
+      for (var j = 0; j < newFriendScores.length; j++) {
+        scoresDiff += Math.abs(
+          parseInt(friends[i].scores[j]) - parseInt(newFriendScores[j])
+        );
+      }
+
+      //push results into scoresArray
+      scoresArray.push(scoresDiff);
     }
-  });
 
-  // ---------------------------------------------------------------------------
-  // I added this below code so you could clear out the table while working with the functionality.
-  // Don"t worry about it!
+    //after all friends are compared, find best match
+    for (var i = 0; i < scoresArray.length; i++) {
+      if (scoresArray[i] <= scoresArray[bestMatch]) {
+        bestMatch = i;
+      }
+    }
 
-  app.post("/api/clear", function(req, res) {
-    // Empty out the arrays of data
-    friends.length = [];
+    //return bestMatch data
+    var bff = friends[bestMatch];
+    console.log(bff);
+    res.json(bff);
 
-    res.json({ ok: true });
+    //pushes new submission into the friendsList array
+    friends.push(newFriend);
   });
 };
